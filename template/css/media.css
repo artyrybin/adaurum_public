@@ -1,0 +1,22 @@
+@media (max-width: 992px) {
+    .topRightButtons .mainButton {
+        margin: 0;
+    }
+    
+    .cmlActions {
+        position: static;
+        margin-top: 10px;
+        margin-bottom: -10px;
+        text-align: right;
+    }
+}
+
+@media (max-width: 768px) {
+    .topRightButtons .mainButton > span {
+        display: none;
+    }
+
+    .companyMainLine > .infoLine {
+        padding-right: 0;
+    }
+}

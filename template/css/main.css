@@ -1,0 +1,549 @@
+body {
+    background: url("../img/bg.png") no-repeat top right/contain;
+    padding-top: 72px;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    --main-color: #be2edd;
+    --main-color-border: #e8bdf5;
+    --main-color-shadow: #ead4f6;
+}
+
+.mainHeader {
+    padding: 20px 0;
+    height: 72px;
+    background: rgba(255,255,255,.7);
+    box-shadow: 0px 1px 0px rgba(255,255,255,.7);
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(3px);
+    -o-backdrop-filter: blur(3px);
+    -moz-backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logotype svg {
+    color: var(--main-color);
+    height: 32px;
+}
+
+.logotype {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -.6px;
+}
+
+.mainButton {
+    font-size: .8125rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    color: #333 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.25rem 0.6rem;
+    border-radius: 8px;
+    transition: .2s background;
+    border: none;
+    background: transparent;
+}
+
+.mainButton:hover {
+    background: rgba(0,0,0,.04);
+}
+
+.mainButton svg {
+    width: 20px;
+    height: 20px;
+}
+
+.mainButton svg > path {
+    width: 20px;
+    height: 20px;
+}
+
+.topRightButtons .mainButton {
+    margin: 0 .5rem;
+}
+
+.topRightButtons .mainButton:last-child {
+    margin-right: 0;
+}
+
+.mainButtonContrast {
+    background: var(--main-color) !important;
+    color: #fff !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.mainButtonContrast:hover {
+    background: rgb(176, 36, 204) !important;
+}
+
+.mainButtonContrast:before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: #fff;
+    position: absolute;
+    left: calc(100% - (100px / 2));
+    bottom: calc(100% - 100px);
+    filter: blur(25px);
+    opacity: .4;
+}
+
+.notFound {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.mainWrapper {
+    padding: 40px 0;
+}
+
+.companiesLine {
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.4);
+    box-shadow: -1px -1px 0px rgba(255,255,255,.7);
+    backdrop-filter: blur(3px);
+    -o-backdrop-filter: blur(3px);
+    -moz-backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.companyItem {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.companyPicture {
+    padding-bottom: 60%;
+    position: relative;
+}
+
+.companyPicture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.companyName {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 90px 20px 20px;
+    color: #111;
+    font-weight: 600;
+    background: linear-gradient(0deg, rgba(255,255,255,.96) 50%, transparent);
+    transition: .2s ease-in-out;
+}
+
+.companyName svg {
+    width: 20px;
+    height: 20px;
+}
+
+.fullHeightLink {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.companyInfo {
+    position: absolute;
+    bottom: calc(-100% + 70px);
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    padding: 0px 20px 20px;
+    background: rgba(255,255,255,.96);
+    color: #111;
+    transition: .2s ease-in-out;
+}
+
+.companyItem:hover .companyName {
+    bottom: calc(100% - 70px);
+}
+
+.companyItem:hover .companyInfo {
+    bottom: 0px;
+}
+
+.companyLine {
+    font-size: 14px;
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+.companyLine b {
+    font-weight: 600;
+    color: #500260;
+}
+
+.viewMore {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+}
+
+.viewMore svg {
+    width: 16px;
+    height: 16px;
+}
+
+.cmBanner {
+    height: 372px;
+    margin: -38px 0 40px;
+    position: relative;
+}
+
+.cmBannerContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    padding-top: 72px;
+    display: flex;
+    align-items: end;
+    background: linear-gradient(0deg, rgba(255,255,255,.96) 10%, transparent);
+}
+
+.bannerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainCompanyName {
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.companyMainLine {
+    padding: 20px;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.companyMainLine > .infoLine {
+    padding-right: 80px;
+    display: block;
+}
+
+.lineHidden {
+    display: none;
+}
+
+.cmlActions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.ccTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.cmlComment {
+    margin-bottom: 15px;
+}
+
+.cmlComment:last-child {
+    margin-bottom: 0;
+}
+
+.cmlCommentsTitle {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 20px;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    background: #f1f1f1;
+    margin: 20px -20px;
+}
+
+.cmlUserInfo {
+    padding-left: 20px;
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+}
+
+.cmlUserInfo span {
+    color: #9d9d9d;
+}
+
+.cmlUserComment {
+    background: #f1f1f1;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    margin-top: 7px;
+    position: relative;
+}
+
+.cmlUserComment:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #f1f1f1;
+    position: absolute;
+    top: -4px;
+    left: 25px;
+    transform: rotate(45deg);
+}
+
+.cmlUserInfo svg {
+    width: 20px;
+    height: 20px;
+    margin-right: -5px;
+}
+
+.cmlMainForm {
+    margin-top: 15px;
+    gap: 10px;
+    font-size: 13px;
+    display: none;
+}
+
+.cmlMainForm.cmlVisible {
+    display: flex;
+}
+
+.cmlInput {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    transition: .2s border;
+    height: 32px;
+    width: 100%;
+}
+
+.cmlInput:focus {
+    border-color: var(--main-color)
+}
+
+.cmlSubmit {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    color: #fff;
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+    background: var(--main-color);
+    transition: .2s;
+}
+
+.cmlSubmit:hover {
+    background: #cd31ec;
+}
+
+.mw320 {
+    max-width: 320px;
+}
+
+.mainModal {
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+}
+
+.mainModal.modalActive {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mainModalWindow {
+    background: #fff;
+    box-shadow: 0px 10px 35px rgba(0,0,0,.2);
+    border-radius: 10px;
+    min-width: 420px;
+    transform: translateY(-40px);
+    transition: .2s;
+    max-height: 96vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.mainModal.modalActive .mainModalWindow {
+    transform: translateY(0);
+}
+
+.mainModalTitle {
+    padding: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.mainModalContent {
+    padding: 20px;
+}
+
+.mainModalFooter {
+    border-top: 1px solid #f1f1f1;
+    padding: 20px;
+}
+
+.inputLabel {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inputLabel label {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.mainInput {
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--main-color-border);
+    box-shadow: 0px 1px 2px var(--main-color-shadow);
+    color: #111;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .35s ease border-color, 35s ease color;
+}
+
+.mainInput:disabled {
+    opacity: .4;
+    color: #000;
+}
+
+.mainInput:focus {
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.noComments {
+    font-size: 14px;
+    font-weight: 600;
+    color: #999;
+    background: #f1f1f1;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+}
+
+.innerModalFooter {
+    margin: 20px -20px -20px;
+    padding: 20px;
+    border-top: 1px solid #f1f1f1;
+}
+
+.mainModalClose {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 23px;
+    right: 20px;
+    background: red;
+    cursor: pointer;
+    background: url('../img/close.svg') no-repeat center center/contain;
+    transition: .2s ease;
+}
+
+.mainModalClose:hover {
+    opacity: .6;
+}
+
+.formTitle {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signForm {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 15px 35px rgba(0,0,0,.1);
+    padding: 20px;
+}
+
+.alert-sm {
+    font-size: 13px;
+    padding: 5px 10px;
+}
+
+.notificationsWrapper {
+    position: fixed;
+    width: 320px;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: 15px 15px 0;
+}
+
+.notificationBox {
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0px 15px 20px rgba(0,0,0,.2);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    display: none;
+}
+
+.notificationTitle {
+    color: var(--main-color);
+    font-weight: 600;
+}
